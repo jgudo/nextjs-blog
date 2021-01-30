@@ -6,7 +6,12 @@ import styles from './layout.module.css'
 const name = 'Julius Guevarra'
 export const siteTitle = 'Next.js Sample Website'
 
-export default function Layout({ children, home }) {
+interface IProps {
+    children: React.ReactNode;
+    home?: boolean;
+}
+
+export default function Layout({ children, home }: IProps) {
     return (
         <div className={styles.container}>
             <Head>

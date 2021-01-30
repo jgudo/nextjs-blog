@@ -14,7 +14,15 @@ export async function getStaticProps() {
   }
 }
 
-export default function Home({ allPostsData }) {
+interface IHomeProps {
+  allPostsData: {
+    date: string
+    title: string
+    id: string
+  }[]
+}
+
+export default function Home({ allPostsData }: IHomeProps) {
   return (
     <>
       <Layout home>
